@@ -4,4 +4,4 @@ If possible I will regularly update this site once a week for it to be better.
 Additional notes-
 The site uses no cookies and does not collect user data.
 It is only a document and keeps record of my status till now.
-Last update to the site was on- 13-05-2024 Time:18:33
+Last update to the site was on- 14-05-2024 Time:19:50
