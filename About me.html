@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel="shortcut icon" type="x-icon" href="favicon1.png">
-<title>My fun with Science</title>
+<title>My Fun With Science!</title>
   <head>
   <style>
 
@@ -19,7 +19,16 @@ background-size:100% 100%;
   </style>
 <img src="download.png">
 <h1>Hello World!</h1>
-</head>
+    <script>
+        let docTitle = My Fun With Science!.title;
+        window.addEventListener("blur", () => {
+            document.title = "Come back here😢";
+        });
+        window.addEventListener("focus", () => {
+            document.title = docTitle;
+        });
+    </script>
+  </head>
 <body>
   <section>
     <h2><i><u>I won't make u bored here! I promise!</u></i></h2>
