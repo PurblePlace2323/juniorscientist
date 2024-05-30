@@ -39,6 +39,18 @@ background-size:100% 100%;
         });
     });
 </script>
+  <button id="vibrateOnce">Vibrate for 200ms</button>
+    <button id="vibratePattern">Vibrate Pattern</button>
+
+    <script>
+        document.getElementById('vibrateOnce').addEventListener('click', () => {
+            navigator.vibrate(200);
+        });
+
+        document.getElementById('vibratePattern').addEventListener('click', () => {
+            navigator.vibrate([200, 100, 200]);
+        });
+    </script>
   </head>
 <body>
   <section>
