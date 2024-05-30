@@ -4,4 +4,5 @@ If possible I will regularly update this site once a week for it to be better.
 Additional notes-
 The site does not collect user data. 
 It is only a document and keeps record of my status till now.
-Last update to the site was on- 26-05-2024 Time:08:10 PM
+Last update to the site was on- 30-05-2024 Time:11:04 AM
+Dark mode and effects were added.
