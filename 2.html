@@ -35,6 +35,18 @@ background-size:100% 100%;
             document.title = docTitle;
         });
     </script>
+<button id="darkModeToggle">Toggle Dark Mode</button>
+<script>
+    document.getElementById('darkModeToggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+<style>
+    .dark-mode {
+        background-color: #121212;
+        color: #FFFFFF;
+    }
+</style>
 </head>
 <body>
 <p align="justify"><font color="0004ff">From age 6 I always crafted something. Even it was trash. It used to teach me something. Till age 8 I used to make these gadgets of science. My mom was tired of cleaning them up. I had made so many of them that I filled up a whole container that is used to fill up grains. It was 1 meter by 500 cm!</font></p>
