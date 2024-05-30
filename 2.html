@@ -129,21 +129,15 @@ background-size:100% 100%;
 </table>
 </p>
 <a href="2.html"> Back to top </a>
- <script>
-        // Function to toggle the border
-        function toggleBorder() {
-            const textElement = document.getElementById('textWithBorder');
-            if (textElement.style.border) {
-                // If the element already has a border, remove it
-                textElement.style.border = '';
-            } else {
-                // If the element doesn't have a border, add one
-                textElement.style.border = '1px solid black'; // Set border style
-            }
+     <script>
+        // Function to apply the text shadow permanently
+        function applyShadow() {
+            const textElement = document.getElementById('textWithShadow');
+            textElement.style.textShadow = '2px 2px 5px rgba(0, 0, 0, 0.5)'; // Set shadow style
         }
 
-        // Toggle the border every 3 seconds (3000 milliseconds)
-        setInterval(toggleBorder, 1000);
+        // Call the function when the page loads
+        window.onload = applyShadow;
     </script>
 </body>
 </html>
