@@ -5,4 +5,5 @@ Additional notes-
 The site does not collect user data. 
 It is only a document and keeps record of my status till now.
 Last update to the site was on- 30-05-2024 Time:11:04 AM
-Dark mode and effects were added.
+Fun things were added.
+JavaScript and CSS by Chat-GPT.
