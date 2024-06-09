@@ -51,11 +51,6 @@
 </font>
   <h4>Listen to some sample music while you read!</h4>
   <p><audio src="sample-15s (1).mp3" controls type="audio/mp3"></audio></p>
-<script>
-        window.onload = function() {
-            alert("Welcome to my website!");
-        };
-</script>
 
 <style>
 
@@ -113,7 +108,7 @@ cursor: url('path/21.png'), auto;
             cursor: url('22.png') 19 0, auto; /* Adjusted hotspot (half of width and height) */
         }
     </style>
- <style>
+<style>
         body {
             font-family: Arial, sans-serif;
         }
@@ -147,6 +142,28 @@ cursor: url('path/21.png'), auto;
             font-size: 14px;
         }
     </style>
+</head>
+<body>
+
+<div class="popup" id="imagePopup">
+    <button class="close-btn" onclick="closePopup()">X</button>
+    <img src="https://via.placeholder.com/300" alt="Popup Image">
+</div>
+
+<script>
+    function showPopup() {
+        document.getElementById('imagePopup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('imagePopup').style.display = 'none';
+    }
+
+    window.onload = function() {
+        alert("Welcome to my website!");
+        setTimeout(showPopup, 3000);
+    };
+</script>
 </head>
 <body>
 
