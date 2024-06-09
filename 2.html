@@ -108,6 +108,7 @@ cursor: url('path/21.png'), auto;
             cursor: url('22.png') 19 0, auto; /* Adjusted hotspot (half of width and height) */
         }
     </style>
+</script>
 <style>
         body {
             font-family: Arial, sans-serif;
@@ -142,9 +143,6 @@ cursor: url('path/21.png'), auto;
             font-size: 14px;
         }
     </style>
-</head>
-<body>
-
 <div class="popup" id="imagePopup">
     <button class="close-btn" onclick="closePopup()">X</button>
     <img src="https://via.placeholder.com/300" alt="Popup Image">
@@ -160,13 +158,13 @@ cursor: url('path/21.png'), auto;
     }
 
     window.onload = function() {
+        // Show the welcome alert immediately
         alert("Welcome to my website!");
+
+        // Show the popup after 3 seconds
         setTimeout(showPopup, 3000);
     };
 </script>
-</head>
-<body>
-
 <div class="popup" id="imagePopup">
     <button class="close-btn" onclick="closePopup()">X</button>
     <img src="https://via.placeholder.com/300" alt="Popup Image">
