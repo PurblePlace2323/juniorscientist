@@ -113,6 +113,62 @@ cursor: url('path/21.png'), auto;
             cursor: url('22.png') 19 0, auto; /* Adjusted hotspot (half of width and height) */
         }
     </style>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            display: none; /* Initially hidden */
+            border: 2px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            background-color: #fff;
+        }
+
+        .popup img {
+            width: 100%;
+            display: block;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="popup" id="imagePopup">
+    <button class="close-btn" onclick="closePopup()">X</button>
+    <img src="https://via.placeholder.com/300" alt="Popup Image">
+</div>
+
+<script>
+    function showPopup() {
+        document.getElementById('imagePopup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('imagePopup').style.display = 'none';
+    }
+
+    // Show the popup after 2 seconds for demo purposes
+    window.onload = function() {
+        setTimeout(showPopup, 2000);
+    }
+</script>
 </head>
 <body>
 <p style="font-size: 20px;" align="justify"><font color="3FA03E">From age 6 I always crafted something. Even it was trash. It used to teach me something. Till age 8 I used to make these gadgets of science. My mom was tired of cleaning them up. I had made so many of them that I filled up a whole container that is used to fill up grains. It was 1 meter by 500 cm!</font></p>
