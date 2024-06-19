@@ -4,6 +4,6 @@ If possible I will regularly update this site once a week for it to be better.
 Additional notes-
 The site does not collect user data. 
 It is only a document and keeps record of my status till now.
-Last update to the site was on- 19-06-2024 Time:07:39 PM
+Last update to the site was on- 19-06-2024 Time:07:40 PM
 Info was added. Teen content coming soon!
 JavaScript and CSS by Chat-GPT.
