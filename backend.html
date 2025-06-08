@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <body style="font-family:sans-serif;text-align:center;margin-top:100px;">
+    <h1>🔥 Summon the ESP8266 Demon 🔥</h1>
+    <button onclick="sendPress()" style="padding:20px 40px;font-size:20px;">👆 Press Me</button>
+
+    <script type="module">
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA96DA6v7stOXYsJhv9qDpAY7i8YcalKRU",
+  authDomain: "esp-sendmail.firebaseapp.com",
+  databaseURL: "https://esp-sendmail-default-rtdb.firebaseio.com",
+  projectId: "esp-sendmail",
+  storageBucket: "esp-sendmail.firebasestorage.app",
+  messagingSenderId: "541682975279",
+  appId: "1:541682975279:web:2ac0efcaa1081cb460fcda",
+  measurementId: "G-WQYEZGQKL0"
+};
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+
+      function sendPress() {
+        const data = {
+          pressed: true,
+          timestamp: Date.now()
+        };
+
+        set(ref(db, 'buttonStatus'), data)
+          .then(() => alert("👀 The ESP shall be summoned..."))
+          .catch((error) => console.error("ERROR🔥:", error));
+      }
+    </script>
+  </body>
+</html>
