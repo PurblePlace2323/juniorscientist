@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Captcha</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    canvas {
+      background: #222;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #00ff88;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Prove you're not a bot 😤</h1>
+
+  <canvas id="captcha" width="200" height="60"></canvas><br>
+
+  <input type="text" id="userInput" placeholder="Enter CAPTCHA" />
+  <button onclick="checkCaptcha()">Submit</button>
+
+  <p id="result" style="margin-top:20px;"></p>
+
+  <script>
+    let generatedCaptcha = '';
+
+    function generateCaptcha() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      generatedCaptcha = '';
+      for (let i = 0; i < 5; i++) {
+        generatedCaptcha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+
+      const canvas = document.getElementById('captcha');
+      const ctx = canvas.getContext('2d');
+
+      // background
+      ctx.fillStyle = '#333';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // noise
+      for (let i = 0; i < 20; i++) {
+        ctx.fillStyle = `rgba(255,255,255,${Math.random()})`;
+        ctx.beginPath();
+        ctx.arc(Math.random()*canvas.width, Math.random()*canvas.height, Math.random()*3, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+
+      // text
+      ctx.font = '30px monospace';
+      ctx.fillStyle = '#0f0';
+      ctx.setTransform(1, 0.2 - Math.random()*0.4, 0, 1, 0, 0); // distortion
+      ctx.fillText(generatedCaptcha, 25, 40);
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // reset
+    }
+
+    function checkCaptcha() {
+      const input = document.getElementById('userInput').value.toUpperCase();
+      const result = document.getElementById('result');
+
+      if (input === generatedCaptcha) {
+        result.textContent = '✅ Verified! Redirecting...';
+        setTimeout(() => {
+          window.location.href = 'About me.html';
+        }, 1000);
+      } else {
+        result.textContent = '❌ Incorrect. Try again.';
+        generateCaptcha();
+      }
+    }
+
+    generateCaptcha();
+  </script>
+
+</body>
+</html>
